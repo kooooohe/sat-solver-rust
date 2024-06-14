@@ -365,7 +365,7 @@ fn solve(x: &mut Vec<VarState>, cnf: &mut Vec<Clause>) -> Option<bool> {
                 None => return Some(true),
             };
             desicion_level += 1;
-            x[i] = VarState::True;
+            x[i] = VarState::False;
             i_grapgh.add_node(i, true, desicion_level, None);
         }
     }
